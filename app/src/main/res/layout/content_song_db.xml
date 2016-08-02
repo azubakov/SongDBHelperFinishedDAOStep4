@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="tomerbu.edu.songdbhelper.SongDBActivity"
+    tools:showIn="@layout/activity_song_db">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etSongName"
+        android:hint="Song Title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:hint="Song Artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etArtist"
+        android:layout_below="@+id/etSongName"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:hint="Duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etDuration"
+        android:layout_below="@+id/etArtist"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:hint="imageUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etImageURI"
+        android:layout_below="@+id/etDuration"
+        android:layout_centerHorizontal="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/etImageURI"
+        android:layout_height="wrap_content" android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="insert"
+            android:text="INSERT"
+            android:layout_below="@+id/etImageURI"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/button2"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="query"
+            android:text="Query"
+            android:id="@+id/button"
+            android:layout_below="@+id/etImageURI"
+            android:layout_toLeftOf="@+id/button2"
+            android:layout_toStartOf="@+id/button2"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="update"
+            android:text="UPDATE"
+            android:id="@+id/button3"
+            android:layout_below="@+id/etImageURI"
+            android:layout_toLeftOf="@+id/button"
+            android:layout_toStartOf="@+id/button"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="delete"
+            android:text="DELETE"
+            android:id="@+id/button4"
+            android:layout_below="@+id/etImageURI"
+            android:layout_toLeftOf="@+id/button3"
+            android:layout_toStartOf="@+id/button3"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</RelativeLayout>
